@@ -10,7 +10,7 @@ export default function Book() {
 
   useEffect(() => {
     const abortController = new AbortController();
-    fetch('https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-category-items/5366/books/ar/ar/1/25/json', {
+    fetch('https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/books/ar/ar/1/25/json', {
       signal: abortController.signal,
     }).then((response) => response.json())
       .then(({ data }) => {
