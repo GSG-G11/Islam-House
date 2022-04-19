@@ -30,9 +30,9 @@ export default function Book() {
       <div>Book</div>
       <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
       { !loading ? !filterArray.length ? books.map((book) => (
-        <BookCard book={book} />
+        <BookCard key={book.id} book={book} />
       )) : filterArray.map((book) => (
-        <BookCard book={book} />
+        <BookCard key={book.id} book={book} />
       )) : <h2>Loading...</h2>}
     </>
   );
