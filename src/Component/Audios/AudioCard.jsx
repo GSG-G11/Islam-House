@@ -5,7 +5,7 @@ import React from 'react';
 export default function AudioCard({ audio }) {
   const audiosArrays = audio.attachments;
   return (
-    <div key={audio.id} className="audio-card">
+    <div className="audio-card">
       <h2>{audio.title}</h2>
       {audiosArrays.map((audios) => (
         <div key={audios.id} className="audio">

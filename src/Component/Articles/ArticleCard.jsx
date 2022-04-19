@@ -3,12 +3,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
-export default function BookCard({ book }) {
+export default function BookCard({ article }) {
   return (
-    <div key={book.id} className="book-card">
-      <h2>{book.title}</h2>
-      <p>{book.description}</p>
-      <a href={book.attachments[0].url} target="_blank" rel="noreferrer">
+    <div key={article.id} className="book-card">
+      <h2>{article.title}</h2>
+      <a href={article.attachments.length ? article.attachments[0].url : null} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faFilePdf} />
       </a>
     </div>
