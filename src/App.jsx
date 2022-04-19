@@ -8,6 +8,7 @@ import {
   from 'react-router-dom';
 import Book from './Component/Book/Book';
 import Home from './Component/HomePage/Home';
+import Audios from './Component/Audios/Audios';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<Book />} />
+        <Route path="/audios" element={<Audios />} />
       </Routes>
     </BrowserRouter>
 
