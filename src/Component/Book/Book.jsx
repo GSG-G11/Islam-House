@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 import BookCard from './BookCard';
+import './book.css';
 
 export default function Book() {
   const [loading, setLoading] = useState(true);
@@ -27,13 +28,20 @@ export default function Book() {
 
   return (
     <>
-      <div>Book</div>
-      <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-      { !loading ? !filterArray.length ? books.map((book) => (
-        <BookCard key={book.id} book={book} />
-      )) : filterArray.map((book) => (
-        <BookCard key={book.id} book={book} />
-      )) : <h2>Loading...</h2>}
+      <div className="header">
+        <div className="item">
+          <img src="../assests/quran.png" alt="quran" />
+          <h3 className="title">الكتب</h3>
+        </div>
+        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search" placeholder=" ... بحث" />
+      </div>
+      <div className="Books" id="Books">
+        { !loading ? !filterArray.length ? books.map((book) => (
+          <BookCard key={book.id} book={book} />
+        )) : filterArray.map((book) => (
+          <BookCard key={book.id} book={book} />
+        )) : <h2>Loading...</h2>}
+      </div>
     </>
   );
 }
