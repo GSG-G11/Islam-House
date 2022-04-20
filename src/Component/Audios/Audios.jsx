@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 import AudioCard from './AudioCard';
+import './audios.css';
 
 export default function Audios() {
   const [loading, setLoading] = useState(true);
@@ -26,14 +27,21 @@ export default function Audios() {
   }, [searchValue]);
 
   return (
-    <div className="content">
-      <div>صوتيات</div>
-      <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-      { !loading ? !filterArray.length ? audios.map((audio) => (
-        <AudioCard key={audio.id} audio={audio} />
-      )) : filterArray.map((audio) => (
-        <AudioCard key={audio.id} audio={audio} />
-      )) : <h2>Loading...</h2>}
-    </div>
+    <>
+      <div className="header">
+        <div className="item">
+          <img src="../assests/lantern.png" alt="lantern" />
+          <h3 className="title">صوتيات</h3>
+        </div>
+        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search-input" placeholder=" بحث عن صوت" />
+      </div>
+      <div className="Audios">
+        { !loading ? !filterArray.length ? audios.map((audio) => (
+          <AudioCard key={audio.id} audio={audio} />
+        )) : filterArray.map((audio) => (
+          <AudioCard key={audio.id} audio={audio} />
+        )) : <h2>Loading...</h2>}
+      </div>
+    </>
   );
 }

@@ -28,8 +28,13 @@ export default function Articles() {
 
   return (
     <div className="content">
-      <h2 className="title">مقالات</h2>
-      <input className="search-input" placeholder="Search for Article" type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      <div className="header">
+        <div className="item">
+          <img src="../assests/article.png" alt="article" />
+          <h3 className="title">مقالات</h3>
+        </div>
+        <input className="search-input" placeholder="بحث عن مقالة" type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      </div>
       <div className="article-container">
         { !loading ? !filterArray.length ? articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
