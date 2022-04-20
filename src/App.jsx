@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import './App.css';
 import {
   BrowserRouter,
   Routes,
@@ -16,12 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="/books" element={<Book />} />
-          <Route path="/audios" element={<Audios />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/articles" element={<Articles />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/books" element={<Book />} />
+        <Route path="/audios" element={<Audios />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/articles" element={<Articles />} />
       </Routes>
     </BrowserRouter>
   );

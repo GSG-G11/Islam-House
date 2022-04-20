@@ -1,0 +1,32 @@
+.home-links{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+.item:nth-of-type(1){
+  background-color: #55efc4bd;
+}
+.item:nth-of-type(2){
+  background-color: #ffeaa7b3;
+}
+.item:nth-of-type(3){
+  background-color: #a29bfebf;
+}
+.item:nth-of-type(4){
+  background-color: #fbc531d1;
+}
+.item:nth-of-type(5){
+  background-color: #ff7675d9;
+}
+.title{
+  color: #3d3e46;
+}
