@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 import ArticleCard from './ArticleCard';
+import './articles.css';
 
 export default function Articles() {
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ export default function Articles() {
         setLoading(false);
         setArticles(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => <h1>{err}</h1>);
     return () => abortController.abort();
   }, []);
 
@@ -26,14 +27,16 @@ export default function Articles() {
   }, [searchValue]);
 
   return (
-    <>
-      <div>Articles</div>
-      <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-      { !loading ? !filterArray.length ? articles.map((article) => (
-        <ArticleCard key={article.id} article={article} />
-      )) : filterArray.map((article) => (
-        <ArticleCard key={article.id} article={article} />
-      )) : <h2>Loading...</h2>}
-    </>
+    <div className="content">
+      <h2 className="title">مقالات</h2>
+      <input className="search-input" placeholder="Search for Article" type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      <div className="article-container">
+        { !loading ? !filterArray.length ? articles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        )) : filterArray.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        )) : <h2>Loading...</h2>}
+      </div>
+    </div>
   );
 }

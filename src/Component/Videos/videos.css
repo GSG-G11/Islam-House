@@ -1,0 +1,24 @@
+/* .videos-container{
+  margin-top: 70px;
+} */
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.video-card{
+  background-color: #ffffffba;
+    direction: rtl;
+    padding: 20px;
+    border-radius: 10px;
+}
+.videos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+video{
+  width: 280px;
+}

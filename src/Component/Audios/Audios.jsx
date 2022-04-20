@@ -26,14 +26,14 @@ export default function Audios() {
   }, [searchValue]);
 
   return (
-    <>
-      <div>Audios</div>
+    <div className="content">
+      <div>صوتيات</div>
       <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
       { !loading ? !filterArray.length ? audios.map((audio) => (
         <AudioCard key={audio.id} audio={audio} />
       )) : filterArray.map((audio) => (
         <AudioCard key={audio.id} audio={audio} />
       )) : <h2>Loading...</h2>}
-    </>
+    </div>
   );
 }

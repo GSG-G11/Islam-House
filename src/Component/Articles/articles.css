@@ -1,0 +1,21 @@
+.article-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.article-card{
+  background-color: #ffffffba;
+    width: 300px;
+    height: 100px;
+    padding: 10px 15px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+.pdf-icon{
+  color: red;
+}

@@ -26,7 +26,7 @@ export default function Book() {
   }, [searchValue]);
 
   return (
-    <>
+    <div className="content">
       <div>Book</div>
       <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
       { !loading ? !filterArray.length ? books.map((book) => (
@@ -34,6 +34,6 @@ export default function Book() {
       )) : filterArray.map((book) => (
         <BookCard key={book.id} book={book} />
       )) : <h2>Loading...</h2>}
-    </>
+    </div>
   );
 }

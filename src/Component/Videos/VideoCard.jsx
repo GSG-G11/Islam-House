@@ -5,14 +5,16 @@ import React from 'react';
 export default function BookCard({ video }) {
   const videosArray = video.attachments;
   return (
-    <div key={video.id} className="book-card">
+    <div key={video.id} className="video-card">
       <h2>{video.title}</h2>
-      <p>{video.description}</p>
-      {videosArray.map((vido) => (
-        <video key={video.id} controls="true">
-          <source src={vido.url} type="audio/mpeg" />
-        </video>
-      ))}
+      <p className="description">{video.description}</p>
+      <div className="videos">
+        {videosArray.map((vido) => (
+          <video key={video.id} controls="true">
+            <source src={vido.url} type="audio/mpeg" />
+          </video>
+        ))}
+      </div>
     </div>
   );
 }

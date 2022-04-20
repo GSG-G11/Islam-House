@@ -23,7 +23,7 @@ code {
 #root{
   background: rgba(30, 121, 3, 0.3);
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   position: absolute;
   z-index: -4;
 }
@@ -115,4 +115,21 @@ ol {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue);
+}
+.content{
+  margin-top: 70px;
+}
+.title{
+  text-align: center;
+  font-size: 50px;
+}
+.search-input{
+  display: block;
+    margin: 20px auto;
+    width: 275px;
+    padding: 8px 15px;
+    border-radius: 16px;
+}
+.description{
+  margin: 10px 0;
 }
