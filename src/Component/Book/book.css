@@ -1,0 +1,45 @@
+.Books {
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 50px;
+}
+
+.book-card {
+    min-height: 150px;
+    padding: 15px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid #f5f3f3;
+    opacity: 1;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: -1px 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.item{
+    width: 35rem;
+    /* background-color: #ffeaa7b3; */
+}
+
+.search{
+    text-align: right;
+    border-radius: 10px;
+    color: #495057;
+    font-size: 0.9rem;
+    font-weight: 400;
+    height: 50px;
+    padding-left: 45px;
+    padding-right: 10px;
+    width: 400px;
+    border: none;
+    background: #FFFFFF;
+}
