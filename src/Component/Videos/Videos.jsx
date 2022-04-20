@@ -28,8 +28,13 @@ export default function Book() {
 
   return (
     <div className="content">
-      <h2 className="title">فيديوهات</h2>
-      <input className="search-input" placeholder="Search for Videos" type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      <div className="header">
+        <div className="item">
+          <img src="../assests/video-player.png" alt="video-player" />
+          <h3 className="title">فيديوهات</h3>
+        </div>
+        <input className="search-input" placeholder="بحث عن فيديو" type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+      </div>
       <div className="card-container">
         { !loading ? !filterArray.length ? videos.map((video) => (
           <VideoCard key={video.id} video={video} />

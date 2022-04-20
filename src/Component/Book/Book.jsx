@@ -33,7 +33,7 @@ export default function Book() {
           <img src="../assests/quran.png" alt="quran" />
           <h3 className="title">الكتب</h3>
         </div>
-        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search" placeholder=" ... بحث" />
+        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search-input" placeholder=" بحث عن كتاب" />
       </div>
       <div className="Books" id="Books">
         { !loading ? !filterArray.length ? books.map((book) => (

@@ -7,14 +7,16 @@ export default function AudioCard({ audio }) {
   return (
     <div className="audio-card">
       <h2>{audio.title}</h2>
-      {audiosArrays.map((audios) => (
-        <div key={audios.id} className="audio">
-          <h4>{audios.description}</h4>
-          <audio controls="true">
-            <source src={audios.url} type="audio/mpeg" />
-          </audio>
-        </div>
-      ))}
+      <div className="audios">
+        {audiosArrays.map((audios) => (
+          <div key={audios.id} className="audio">
+            <h4>{audios.description}</h4>
+            <audio controls="true" className="source">
+              <source src={audios.url} type="audio/mpeg" />
+            </audio>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

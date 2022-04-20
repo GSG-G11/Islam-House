@@ -8,7 +8,7 @@ export default function BookCard({ book }) {
     <div key={book.id} className="book-card">
       <h2>{book.title}</h2>
       <p className="bookDescription">{book.description}</p>
-      <a href={book.attachments[0].url} target="_blank" rel="noreferrer">
+      <a className="pdf-icon" href={book.attachments[0].url} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faFilePdf} />
       </a>
     </div>

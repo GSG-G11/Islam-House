@@ -1,6 +1,17 @@
 /* .videos-container{
   margin-top: 70px;
 } */
+.header{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.item{
+  width: 35rem;
+}
 .card-container{
   display: flex;
   flex-direction: column;
@@ -12,6 +23,7 @@
     padding: 20px;
     border-radius: 10px;
 }
+
 .videos{
   display: flex;
   align-items: center;
@@ -19,6 +31,7 @@
   flex-wrap: wrap;
   gap: 5px;
 }
+
 video{
   width: 280px;
 }
