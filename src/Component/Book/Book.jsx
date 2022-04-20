@@ -18,7 +18,7 @@ export default function Book() {
         setLoading(false);
         setBooks(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => <h1>{err}</h1>);
     return () => abortController.abort();
   }, []);
 
