@@ -5,7 +5,7 @@ import './home.css';
 export default function Home() {
   return (
     <div className="container">
-      <ul className="home-links">
+      <div className="home-links">
         <Link className="item" to="/">
           <img src="../assests/kaaba.png" alt="kaaba" />
           <h3 className="title">الصفحة الرئيسية</h3>
@@ -26,7 +26,7 @@ export default function Home() {
           <img src="../assests/article.png" alt="article" />
           <h3 className="title">مقالات</h3>
         </Link>
-      </ul>
+      </div>
     </div>
   );
 }
